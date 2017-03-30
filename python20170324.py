@@ -71,5 +71,5 @@ def print_lol(L):
 print_lol(movies)
 
 
-import sys
-sys.path
+# import sys
+# sys.path
