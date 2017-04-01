@@ -1,7 +1,1 @@
-<<<<<<< HEAD
-I love python.
-I love python.
-I love python too.
-I love python as you.
- just test pull and push.
-I don't know why there was a message conflict.
+zxcvbnm,.
