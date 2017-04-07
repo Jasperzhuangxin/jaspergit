@@ -1,16 +1,18 @@
 
 """
-This is the "nester.py" module, 
-and it provides one funtion called print_lol() 
-which prints list that may or may not include nested list.
+This is "nester.py" module, 
+which provides a funtion named print_lol. 
+the function is designed for print list, 
+may include(or not) nest list.
 """
 
 
 def print_lol(the_list):
     """
-    This function takes a positional parameter called "the_list". 
-    which is any Python list (of, possibly, nested lists).
-    Each data item in the provided list is (recursively) printed to the screen on its own line.
+    This function pick a location parameter, named "the_list". 
+    it can be any python list (can be nest list which include another nest list).
+    by use this function, each per data item in the list will be output to the screen in a nested.
+    each data item takes up one line.
     """
     for each_item in the_list:
         if isinstance(each_item,list):

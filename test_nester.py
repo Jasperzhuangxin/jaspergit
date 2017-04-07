@@ -1,3 +1,3 @@
-import nester
+from nester import print_lol
 cast = ['A','B','C','D','E']
-nester.print_lol (cast)
+print_lol (cast)
