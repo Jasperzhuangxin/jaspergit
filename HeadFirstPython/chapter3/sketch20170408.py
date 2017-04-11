@@ -1,3 +1,8 @@
+
+from nester20170405 import print_lol
+import os
+import sys
+
 man=[]
 other=[]
 try:
@@ -36,9 +41,9 @@ except IOError:
 
 try:
 	with open('man_date.txt','w') as man_file:
-		print (man, file=man_file)
+		print_lol (man, True, fn=man_file)
 	with open('other_data.txt','w') as other_file:
-		print (other,file=other_file)
+		print_lol (other, True, fn=other_file)
 except IOError as err:
 	print ('File Error: ' + str(err))
 

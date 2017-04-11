@@ -5,9 +5,9 @@ which provides a funtion named print_lol.
 the function is designed for print list, 
 may include(or not) nest list.
 """
-import sys
 
-def print_lol(the_list,indent=False,level=0,fn=sys.stdout):
+
+def print_lol(the_list,indent=False,level=0, fn=sys.stdout):
     """
     This function pick a location parameter, named "the_list". 
     it can be any python list (can be nest list which include another nest list).
@@ -21,7 +21,7 @@ def print_lol(the_list,indent=False,level=0,fn=sys.stdout):
             if indent:
                 for tab_stop in range(level):
                     print ("\t",end='', file=fn)
-            print(each_item,file=fn)
+            print(each_item, file=fn)
 
 
 
