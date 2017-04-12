@@ -1,6 +1,6 @@
 # from nester20170405 import print_lol
 
-james_ts=[]
+# james_ts=[]
 # julie_ts=[]
 # mikey_ts=[]
 sarah_ts=[]
@@ -19,8 +19,8 @@ try:
 	with open('james.txt','r') as jaf:
 		data=jaf.readline()
 	james=data.strip().split(',') # transfer char into list.
-	for ts in james:
-		james_ts.append(sanitize(ts))
+#	for ts in james:
+#		james_ts.append(sanitize(ts))
 
 	with open('julie.txt','r') as juf:
 		data=juf.readline()
@@ -42,10 +42,12 @@ try:
 	for ts in sarah:
 		sarah_ts.append(sanitize(ts))
 
-	print (sorted(james_ts))
+	print (sorted((sanitize(james_ts) for james_ts in james),reverse=True))
 	print (sorted(julie_ts,reverse=True))
 	print (sorted(mikey_ts))
 	print (sorted(sarah_ts,reverse=True))
 
 except IOError as err:
 	print ('File error: ' + str(err))
+
+
