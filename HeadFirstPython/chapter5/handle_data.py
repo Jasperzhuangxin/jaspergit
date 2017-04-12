@@ -1,7 +1,7 @@
 # from nester20170405 import print_lol
 
 # james_ts=[]
-# julie_ts=[]
+julie_ts=[]
 # mikey_ts=[]
 sarah_ts=[]
 
@@ -27,7 +27,12 @@ try:
 	julie=data.strip().split(',')
 #	for ts in julie:
 #		julie_ts.append(sanitize(ts))
-	julie_ts=[sanitize(each_t) for each_t in julie]
+	julie=[sanitize(each_t) for each_t in julie]
+	for each_t in julie:
+		if each_t not in julie_ts:
+			julie_ts.append(each_t)
+#		else:
+#			pass
 
 	with open('mikey.txt','r') as mif:
 		data=mif.readline()
@@ -42,7 +47,7 @@ try:
 	for ts in sarah:
 		sarah_ts.append(sanitize(ts))
 
-	print (sorted((sanitize(james_ts) for james_ts in james),reverse=True))
+	print (sorted((sanitize(james_ts) for james_ts in james),reverse=True)[0:3])
 	print (sorted(julie_ts,reverse=True))
 	print (sorted(mikey_ts))
 	print (sorted(sarah_ts,reverse=True))
