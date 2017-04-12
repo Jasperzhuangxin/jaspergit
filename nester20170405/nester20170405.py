@@ -9,10 +9,14 @@ import sys
 
 def print_lol(the_list,indent=False,level=0,fn=sys.stdout):
     """
-    This function pick a location parameter, named "the_list". 
+    This function pick a location parameter called "the_list". 
     it can be any python list (can be nest list which include another nest list).
     by use this function, each per data item in the list will be output to the screen in a nested.
     each data item takes up one line.
+    the first parameter is the list name
+    the second parameter is for choosing indent or not.
+    the third parameter is provide the number of whitespace in front of each item.each
+    the fourth is tell the function where the data will be written, screen or a file.
     """
     for each_item in the_list:
         if isinstance(each_item,list):
