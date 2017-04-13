@@ -56,7 +56,7 @@ def sanitize(time_string):
 		splitter=':'
 	else:
 		return(time_string)
-	(mins, secs) = time_string.split(splitter)
+	(mins, secs) = time_string.split(splitter,1)
 	return (mins + '.' + secs)
 
 def get_coach_data(filename):
@@ -68,8 +68,9 @@ def get_coach_data(filename):
 		print ('File error: ' + str(ioerr))
 		return(None)
 
-F=['james.txt','julie.txt','mikey.txt','sarah.txt']
+F=['james2.txt','julie2.txt','mikey2.txt','sarah2.txt']
 for fn in F:
 	FD=get_coach_data(fn)
-	print (fn,end='  ')
-	print (sorted(set(sanitize(Fe) for Fe in FD),reverse=True)[0:3])
+	(name, birthday) = FD.pop(0), FD.pop(0)	
+	print (name + "'s fastest times are: " + str(sorted(set(sanitize(Fe) for Fe in FD),reverse=True)[0:3]))
+
