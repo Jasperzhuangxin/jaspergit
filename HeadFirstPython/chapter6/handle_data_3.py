@@ -63,22 +63,14 @@ def get_coach_data(filename):
 	try:
 		with open(filename) as f:
 			data=f.readline()
-		return(data.strip().split(','))
+		templ=data.strip().split(',')
+		return({'Name':templ.pop(0),'DOB':templ.pop(0),'Times':str(sorted(set([sanitize(t) for t in templ]),reverse=True)[0:3])})
 	except IOError as ioerr:
 		print ('File error: ' + str(ioerr))
 		return(None)
 
-# F=['james2.txt','julie2.txt','mikey2.txt','sarah2.txt']
-# for fn in F:
-# 	FD=get_coach_data(fn)
-# 	(name, birthday) = FD.pop(0), FD.pop(0)	
-# 	print (name + "'s fastest times are: " + str(sorted(set(sanitize(Fe) for Fe in FD),reverse=True)[0:3]))
 
-FDic={}
 F=['james2.txt','julie2.txt','mikey2.txt','sarah2.txt']
 for fn in F:
-	FD=get_coach_data(fn)
-	FDic['Name']=FD.pop(0)
-	FDic['Birthday']=FD.pop(0)
-	FDic['Times']=sorted(set(sanitize(Fe) for Fe in FD),reverse=True)[0:3]
-	print (FDic['Name'] + "'s fastest times are: " + str(FDic['Times']))
+	FN=get_coach_data(fn)
+	print (FN['Name'] + "'s fastest times are: " + FN['Times'])
