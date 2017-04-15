@@ -56,14 +56,22 @@ vera=Athlete('vera vi')
 vera.add_time('1.31')
 print(vera.top3())
 vera.add_times(['2.22','1-21','2:33'])
-print(vera.top3())
-
+print ('+++++++++++++++++++++++++++++++++++++++++++++')
 johnny = NamedList("Jasper Wang")
 print ('johnny type is ' + str(type(johnny)))
 # print (dir(johnny))
 johnny.append("Bass Player")
 johnny.extend(['Composer','Arranger','Musician'])
+print ('********************************************************')
+abcdef = {}
+abcdef[johnny.name]=johnny
+print (abcdef)
+
+print ('^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^')
+print (johnny.name)
 print (johnny)
+print ('+++++++++++++++++++++++++++++++++++++++++++++')
+
 print (johnny.name + ' is a ', end=' ')
 for attr in johnny:
 	if attr == johnny[-1]:
