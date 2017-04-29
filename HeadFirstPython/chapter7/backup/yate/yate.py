@@ -42,3 +42,49 @@ def header(header_text, header_level=2):
 
 def para(para_text):
     return('<p>' + para_text + '</p>') 
+
+
+print (start_response()+"Jasper")
+print (start_response("text/plain"))
+print (start_response("application/jason"))
+
+print (include_header("Welcome to my home on the web!"))
+print ('********************************************************')
+
+print (include_footer({'Home': '/index.html', 'Selct': '/cgi-bin/select.py'}))
+
+print ('********************************************************')
+print (start_form("/cgi-bin/process-athlete.py"))
+
+print ('********************************************************')
+print (end_form())
+
+print ('********************************************************')
+print (end_form("Click to Confirm Your Order"))
+
+print ('********************************************************')
+for fab in ['John','Paul','George','Ringo']:
+    print (radio_button(fab, fab))
+
+print ('********************************************************')
+print (u_list(['Life of Brian', 'Holy Grail']))
+
+print ('********************************************************')
+print (header("Welcome to my home on the web!"))
+print (header("This is a sub-sub-sub-sub heading",5))
+
+print ('********************************************************')
+print (para("Was it worth the wait? We hope it was..."))
+
+
+
+
+
+
+
+
+
+
+
+
+
